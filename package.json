@@ -1,0 +1,48 @@
+{
+  "name": "axis3d-geometry",
+  "version": "1.0.0",
+  "description": "Geometry for Axis3D.",
+  "main": "index.js",
+  "scripts": {
+    "test": ":",
+    "example": "budo example -p 3000 --live --verbose"
+  },
+  "keywords": [
+    "axis3d",
+    "webgl",
+    "geometry",
+    "geometries",
+    "vector",
+    "graphics"
+  ],
+  "author": "Vanessa Pyne <vip@littlstar.com>",
+  "license": "MIT",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-destructuring"
+    ]
+  },
+  "devDependencies": {
+    "axis3d": "^0.1.13",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "budo": "^10.0.3"
+  },
+  "peerDependencies": {
+    "axis3d": "^0.1.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlstar/axis3d-geometry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/littlstar/axis3d-geometry/issues"
+  },
+  "homepage": "https://github.com/littlstar/axis3d-geometry#readme"
+}
