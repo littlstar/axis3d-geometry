@@ -54,7 +54,6 @@ frame(({time}) => {
   segments: Object
   size: Object
   uvs: Array
-  _complex: Object
 }
 ```
 ### TriangleGeometry
@@ -65,7 +64,6 @@ frame(({time}) => {
   normals: Array
   positions: Array
   uvs: Array
-  _complex: Object
 }
 ```
 ### CylinderGeometry
@@ -92,7 +90,6 @@ frame(({time}) => {
   radiusBottom: Number
   radiusTop: Number
   uvs: Array
-  _complex: Object
 }
 ```
 ### SphereGeometry
@@ -109,7 +106,6 @@ frame(({time}) => {
   radius: Number
   segments: Number
   uvs: Array
-  _complex: Object
 }
 ```
 ### PlaneGeometry
@@ -128,7 +124,6 @@ frame(({time}) => {
   quads: Boolean
   segments: Number
   uvs: Array
-  _complex: Object
 }
 ```
 ### TorusGeometry
@@ -151,7 +146,6 @@ frame(({time}) => {
   minorRadius: Number
   arc: Number
   uvs: Array
-  _complex: Object
 }
 ```
 ### CapsuleGeometry
@@ -171,6 +165,5 @@ frame(({time}) => {
   segments: Number
   resolution: Number
   uvs: Array
-  _complex: Object
 }
 ```
