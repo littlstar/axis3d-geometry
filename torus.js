@@ -51,11 +51,11 @@ function TorusGeometry(opts) {
   torus.normals = geo.complex.normals
   torus.uvs = geo.complex.uvs
   torus.cells = geo.complex.cells
-  torus.majorSegments = geo.majorSegments
-  torus.minorSegments = geo.minorSegments
-  torus.majorRadius = geo.majorRadius
-  torus.minorRadius = geo.minorRadius
-  torus.arc = geo.arc
+  torus.majorSegments = majorSegments
+  torus.minorSegments = minorSegments
+  torus.majorRadius = majorRadius
+  torus.minorRadius = minorRadius
+  torus.arc = arc
 
   return torus
 }

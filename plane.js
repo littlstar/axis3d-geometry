@@ -65,9 +65,9 @@ function PlaneGeometry(opts) {
   plane.normals = geo.complex.normals
   plane.uvs = geo.complex.uvs
   plane.cells = geo.complex.cells
-  plane.size = geo.size
-  plane.quads = geo.quads
-  plane.segments = geo.segments
+  plane.size = size
+  plane.quads = quads
+  plane.segments = segments
 
   return plane
 }

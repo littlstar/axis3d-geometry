@@ -42,10 +42,10 @@ function CapsuleGeometry(opts) {
   capsule.normals = geo.complex.normals
   capsule.uvs = geo.complex.uvs
   capsule.cells = geo.complex.cells
-  capsule.radius = geo.radius
-  capsule.height = geo.height
-  capsule.segments = geo.segments
-  capsule.resolution = geo.resolution
+  capsule.radius = radius
+  capsule.height = height
+  capsule.segments = segments
+  capsule.resolution = resolution
 
   return capsule
 }

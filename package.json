@@ -15,6 +15,15 @@
     "vector",
     "graphics"
   ],
+  "dependencies": {
+    "primitive-capsule": "^2.0.2",
+    "primitive-cube": "^2.0.0",
+    "primitive-cylinder": "^1.0.1",
+    "primitive-plane": "^1.0.1",
+    "primitive-quad": "^1.0.1",
+    "primitive-sphere": "^2.0.0",
+    "primitive-torus": "^1.0.4"
+  },
   "author": "Vanessa Pyne <vip@littlstar.com>",
   "license": "MIT",
   "browserify": {

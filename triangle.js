@@ -36,7 +36,6 @@ function TriangleGeometry() {
   triangle.positions = geo.complex.positions
   triangle.normals = geo.complex.normals
   triangle.uvs = geo.complex.uvs
-  triangle.cells = geo.complex.cells
 
   return triangle
 }

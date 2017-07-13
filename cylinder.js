@@ -49,11 +49,11 @@ function CylinderGeometry(opts) {
   cylinder.normals = geo.complex.normals
   cylinder.uvs = geo.complex.uvs
   cylinder.cells = geo.complex.cells
-  cylinder.height = geo.height
-  cylinder.radiusTop = geo.radiusTop
-  cylinder.radiusBottom = geo.radiusBottom
-  cylinder.radialSegments = geo.radialSegments
-  cylinder.heightSegments = geo.heightSegments
+  cylinder.height = height
+  cylinder.radiusTop = radiusTop
+  cylinder.radiusBottom = radiusBottom
+  cylinder.radialSegments = radialSegments
+  cylinder.heightSegments = heightSegments
 
   return cylinder
 }

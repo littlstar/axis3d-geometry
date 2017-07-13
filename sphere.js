@@ -42,8 +42,8 @@ function SphereGeometry(opts) {
   sphere.normals = geo.complex.normals
   sphere.uvs = geo.complex.uvs
   sphere.cells = geo.complex.cells
-  sphere.radius = geo.radius
-  sphere.segments = geo.segments
+  sphere.radius = radius
+  sphere.segments = segments
 
   return sphere
 }
