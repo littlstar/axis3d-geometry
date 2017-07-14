@@ -7,9 +7,7 @@ const { Geometry } = require('axis3d')
 
 module.exports = TriangleGeometry
 function TriangleGeometry() {
-  let triangle = {}
-
-  const geo = new Geometry({
+  const triangle = new Geometry({
     complex: {
       positions: [
         [-1.0, -0.5*Math.sqrt(3), +0.0],
@@ -30,12 +28,6 @@ function TriangleGeometry() {
       ],
     }
   })
-
-  triangle._complex = geo._complex
-  triangle.complex = geo.complex
-  triangle.positions = geo.complex.positions
-  triangle.normals = geo.complex.normals
-  triangle.uvs = geo.complex.uvs
 
   return triangle
 }

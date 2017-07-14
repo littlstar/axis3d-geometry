@@ -16,13 +16,16 @@
     "graphics"
   ],
   "dependencies": {
+    "devtool": "^2.3.1",
     "primitive-capsule": "^2.0.2",
     "primitive-cube": "^2.0.0",
     "primitive-cylinder": "^1.0.1",
     "primitive-plane": "^1.0.1",
     "primitive-quad": "^1.0.1",
     "primitive-sphere": "^2.0.0",
-    "primitive-torus": "^1.0.4"
+    "primitive-torus": "^1.0.4",
+    "colortape": "^0.1.2",
+    "tape": "^4.7.0"
   },
   "author": "Vanessa Pyne <vip@littlstar.com>",
   "license": "MIT",
@@ -41,7 +44,8 @@
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
-    "budo": "^10.0.3"
+    "budo": "^10.0.3",
+    "tape": "^4.7.x"
   },
   "peerDependencies": {
     "axis3d": "^0.1.x"

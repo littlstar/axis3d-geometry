@@ -13,7 +13,6 @@ function CapsuleGeometry(opts) {
     opts = {}
   }
 
-  let capsule = {}
   let { radius,
         height,
         segments,
@@ -32,16 +31,10 @@ function CapsuleGeometry(opts) {
     }
   }
 
-  const geo = new Geometry({
+  const capsule = new Geometry({
     complex: PrimitiveCapsule(radius, height, resolution, segments)
   })
 
-  capsule._complex = geo._complex
-  capsule.complex = geo.complex
-  capsule.positions = geo.complex.positions
-  capsule.normals = geo.complex.normals
-  capsule.uvs = geo.complex.uvs
-  capsule.cells = geo.complex.cells
   capsule.radius = radius
   capsule.height = height
   capsule.segments = segments

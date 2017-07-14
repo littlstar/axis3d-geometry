@@ -13,7 +13,6 @@ function CylinderGeometry(opts) {
     opts = {}
   }
 
-  let cylinder = {}
   let { height,
         radiusTop,
         radiusBottom,
@@ -34,7 +33,7 @@ function CylinderGeometry(opts) {
     }
   }
 
-  const geo = new Geometry({
+  const cylinder = new Geometry({
     complex: PrimitiveCylinder(
       radiusTop,
       radiusBottom,
@@ -43,12 +42,6 @@ function CylinderGeometry(opts) {
       heightSegments),
   })
 
-  cylinder._complex = geo._complex
-  cylinder.complex = geo.complex
-  cylinder.positions = geo.complex.positions
-  cylinder.normals = geo.complex.normals
-  cylinder.uvs = geo.complex.uvs
-  cylinder.cells = geo.complex.cells
   cylinder.height = height
   cylinder.radiusTop = radiusTop
   cylinder.radiusBottom = radiusBottom

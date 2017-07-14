@@ -13,7 +13,6 @@ function BoxGeometry(opts) {
     opts = {}
   }
 
-  let box = {}
   let { segments, x, y, z } = opts
 
   // defaults
@@ -59,16 +58,10 @@ function BoxGeometry(opts) {
     }
   }
 
-  const geo = new Geometry({
+  const box = new Geometry({
     complex: PrimitiveCube(x, y, z, segments.x, segments.y, segments.z)
   })
 
-  box._complex = geo._complex
-  box.complex = geo.complex
-  box.positions = geo.complex.positions
-  box.normals = geo.complex.normals
-  box.uvs = geo.complex.uvs
-  box.cells = geo.complex.cells
   box.size = {x, y, z}
   box.segments = segments
 

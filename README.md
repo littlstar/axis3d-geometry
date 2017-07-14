@@ -47,13 +47,15 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
   segments: Object
+    x, y, z
   size: Object
-  uvs: Array
+    x, y, z
 }
 ```
 ### TriangleGeometry
@@ -61,9 +63,9 @@ frame(({time}) => {
 ```
 {
   complex: Object
-  normals: Array
-  positions: Array
-  uvs: Array
+    normals: Array
+    positions: Array
+    uvs: Array
 }
 ```
 ### CylinderGeometry
@@ -76,20 +78,16 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
-  segments: Object
-  size: Object
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
   height: Number
   heightSegments: Number
-  normals: Array
-  positions: Array
   radialSegments: Number
   radiusBottom: Number
   radiusTop: Number
-  uvs: Array
 }
 ```
 ### SphereGeometry
@@ -99,13 +97,13 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
   radius: Number
   segments: Number
-  uvs: Array
 }
 ```
 ### PlaneGeometry
@@ -116,14 +114,16 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
-  size: Number
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
+  size: Object
+    x, y
+  segments: Object
+    x, y
   quads: Boolean
-  segments: Number
-  uvs: Array
 }
 ```
 ### TorusGeometry
@@ -136,16 +136,16 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
   majorSegments: Number
   minorSegments: Number
   majorRadius: Number
   minorRadius: Number
   arc: Number
-  uvs: Array
 }
 ```
 ### CapsuleGeometry
@@ -156,14 +156,18 @@ frame(({time}) => {
 #### Returns:
 ```
 {
-  cells: Array
   complex: Object
-  normals: Array
-  positions: Array
+    cells: Array
+    normals: Array
+    positions: Array
+    uvs: Array
   radius: Number
   height: Number
   segments: Number
   resolution: Number
-  uvs: Array
 }
 ```
+
+## Test
+
+`$ node_modules/.bin/devtool test/index.js -hqc -t 1000 | node_modules/.bin/colortape`

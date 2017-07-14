@@ -13,7 +13,6 @@ function SphereGeometry(opts) {
     opts = {}
   }
 
-  let sphere = {}
   let { radius,
         segments
       } = opts
@@ -34,14 +33,10 @@ function SphereGeometry(opts) {
     )
   }
 
-  const geo = new Geometry({complex: PrimitiveSphere(radius, {segments})})
+  const sphere = new Geometry({
+    complex: PrimitiveSphere(radius, {segments})
+  })
 
-  sphere._complex = geo._complex
-  sphere.complex = geo.complex
-  sphere.positions = geo.complex.positions
-  sphere.normals = geo.complex.normals
-  sphere.uvs = geo.complex.uvs
-  sphere.cells = geo.complex.cells
   sphere.radius = radius
   sphere.segments = segments
 

@@ -6,6 +6,20 @@
 const PrimitiveTorus = require('primitive-torus')
 const { Geometry } = require('axis3d')
 
+
+const instanceOf = (instance, Parent) => {
+  if (null == instance || null == Parent) {
+    return false
+  } else if (Array.isArray(instance[$types])) {
+      return (
+         instance[$types].includes(Parent.name.toLowerCase())
+      || instance[$types].includes(Parent.name)
+      )
+  } else {
+    return instance instanceof Parent
+  }
+}
+
 module.exports = TorusGeometry
 function TorusGeometry(opts) {
   // ensure object
@@ -13,7 +27,6 @@ function TorusGeometry(opts) {
     opts = {}
   }
 
-  let torus = {}
   let {
     majorSegments,
     minorSegments,
@@ -37,7 +50,7 @@ function TorusGeometry(opts) {
     }
   }
 
-  const geo = new Geometry({
+  const torus = new Geometry({
     complex: PrimitiveTorus({
       majorSegments, minorSegments,
       majorRadius, minorSegments,
@@ -45,12 +58,6 @@ function TorusGeometry(opts) {
     }),
   })
 
-  torus._complex = geo._complex
-  torus.complex = geo.complex
-  torus.positions = geo.complex.positions
-  torus.normals = geo.complex.normals
-  torus.uvs = geo.complex.uvs
-  torus.cells = geo.complex.cells
   torus.majorSegments = majorSegments
   torus.minorSegments = minorSegments
   torus.majorRadius = majorRadius

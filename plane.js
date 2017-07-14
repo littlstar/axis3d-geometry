@@ -13,7 +13,6 @@ function PlaneGeometry(opts) {
     opts = {}
   }
 
-  let plane = {}
   let { size,
         segments,
         quads } = opts
@@ -51,7 +50,7 @@ function PlaneGeometry(opts) {
     }
   }
 
-  const geo = new Geometry({
+  const plane = new Geometry({
     complex: PrimitivePlane(
       size.x, size.y,
       segments.x, segments.y,
@@ -59,12 +58,6 @@ function PlaneGeometry(opts) {
     )
   })
 
-  plane._complex = geo._complex
-  plane.complex = geo.complex
-  plane.positions = geo.complex.positions
-  plane.normals = geo.complex.normals
-  plane.uvs = geo.complex.uvs
-  plane.cells = geo.complex.cells
   plane.size = size
   plane.quads = quads
   plane.segments = segments
