@@ -11,7 +11,7 @@ Download or clone this repo and run:
 
 ```
 npm install
-budo example -p 3000 --live --verbose
+npm run example
 ```
 
 ## Example
