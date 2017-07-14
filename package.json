@@ -4,7 +4,7 @@
   "description": "Geometry for Axis3D.",
   "main": "index.js",
   "scripts": {
-    "test": ":",
+    "test": "node_modules/.bin/devtool test/index.js -hqc -t 1000 | node_modules/.bin/colortape",
     "example": "budo example -p 3000 --live --verbose"
   },
   "keywords": [

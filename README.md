@@ -167,7 +167,3 @@ frame(({time}) => {
   resolution: Number
 }
 ```
-
-## Test
-
-`$ node_modules/.bin/devtool test/index.js -hqc -t 1000 | node_modules/.bin/colortape`
