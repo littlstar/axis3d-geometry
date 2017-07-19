@@ -1,8 +1,5 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const PrimitivePlane = require('primitive-plane')
 const { Geometry } = require('axis3d')
 
@@ -51,16 +48,8 @@ function PlaneGeometry(opts) {
   }
 
   const plane = new Geometry({
-    complex: PrimitivePlane(
-      size.x, size.y,
-      segments.x, segments.y,
-      {quads}
-    )
+    complex: PrimitivePlane(size.x, size.y, segments.x, segments.y, {quads})
   })
 
-  plane.size = size
-  plane.quads = quads
-  plane.segments = segments
-
-  return plane
+  return Object.assign(plane, {size, quads, segments})
 }

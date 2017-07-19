@@ -1,8 +1,5 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const PrimitiveSphere = require('primitive-sphere')
 const { Geometry } = require('axis3d')
 
@@ -13,9 +10,7 @@ function SphereGeometry(opts) {
     opts = {}
   }
 
-  let { radius,
-        segments
-      } = opts
+  let { radius, segments } = opts
 
   // defaults
   if (null == radius) { radius = 1 }
@@ -37,8 +32,5 @@ function SphereGeometry(opts) {
     complex: PrimitiveSphere(radius, {segments})
   })
 
-  sphere.radius = radius
-  sphere.segments = segments
-
-  return sphere
+  return Object.assign(sphere, {radius, segments})
 }

@@ -1,18 +1,15 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const CylinderGeometry = require('../cylinder')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
 const noop = () => void 0
 const createCylinderGeometry = (o) => {
   return new CylinderGeometry(o)
 }
 
-test('new CylinderGeometry(opts) -> Function', ({
+test('new CylinderGeometry(opts)', ({
   deepEqual,
   assert,
   throws,

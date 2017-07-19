@@ -16,6 +16,7 @@
     "graphics"
   ],
   "dependencies": {
+    "gl-quat": "^1.0.0",
     "primitive-capsule": "^2.0.2",
     "primitive-cube": "^2.0.0",
     "primitive-cylinder": "^1.0.1",

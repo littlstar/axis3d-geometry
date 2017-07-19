@@ -1,12 +1,9 @@
-'use strict'
-
 module.exports = {
   TriangleGeometry: require('./triangle'),
   CylinderGeometry: require('./cylinder'),
+  CapsuleGeometry: require('./capsule'),
   SphereGeometry: require('./sphere'),
   PlaneGeometry: require('./plane'),
   TorusGeometry: require('./torus'),
-  CapsuleGeometry: require('./capsule'),
-  BoxGeometry: require('./box')
+  BoxGeometry: require('./box'),
 }
-

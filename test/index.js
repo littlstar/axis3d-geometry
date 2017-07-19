@@ -1,9 +1,7 @@
-'use strict'
-
-require('./box')
-require('./capsule')
-require('./cylinder')
-require('./plane')
-require('./sphere')
-require('./torus')
 require('./triangle')
+require('./cylinder')
+require('./capsule')
+require('./sphere')
+require('./plane')
+require('./torus')
+require('./box')

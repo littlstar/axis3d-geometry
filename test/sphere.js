@@ -1,18 +1,15 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const SphereGeometry = require('../sphere')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
 const noop = () => void 0
 const createSphereGeometry = (o) => {
   return new SphereGeometry(o)
 }
 
-test('new SphereGeometry(opts) -> Function', ({
+test('new SphereGeometry(opts)', ({
   deepEqual,
   throws,
   assert,

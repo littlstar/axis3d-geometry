@@ -1,18 +1,15 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const TorusGeometry = require('../torus')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
 const noop = () => void 0
 const createTorusGeometry = (o) => {
   return new TorusGeometry(o)
 }
 
-test('new TorusGeometry(opts) -> Function', ({
+test('new TorusGeometry(opts)', ({
   deepEqual,
   assert,
   throws,

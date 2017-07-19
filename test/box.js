@@ -1,13 +1,10 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
 const { Geometry } = require('axis3d')
 const BoxGeometry = require('../box')
+const test = require('tape')
 
-let boxCount
+let boxCount = 0
 const noop = () => void 0
 const createBoxGeometry = (o) => {
   const bx = new BoxGeometry(o)
@@ -15,7 +12,7 @@ const createBoxGeometry = (o) => {
   return bx
 }
 
-test('new BoxGeometry(opts) -> Function', ({
+test('new BoxGeometry(opts)', ({
   deepEqual,
   assert,
   throws,

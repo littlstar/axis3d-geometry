@@ -1,18 +1,15 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const PlaneGeometry = require('../plane')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
 const noop = () => void 0
 const createPlaneGeometry = (o) => {
   return new PlaneGeometry(o)
 }
 
-test('new PlaneGeometry(opts) -> Function', ({
+test('new PlaneGeometry(opts)', ({
   deepEqual,
   assert,
   throws,

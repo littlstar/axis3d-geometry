@@ -1,10 +1,7 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const { Geometry } = require('axis3d')
 const PrimitiveCube = require('primitive-cube')
+const { Geometry } = require('axis3d')
 
 module.exports = BoxGeometry
 function BoxGeometry(opts) {
@@ -62,8 +59,5 @@ function BoxGeometry(opts) {
     complex: PrimitiveCube(x, y, z, segments.x, segments.y, segments.z)
   })
 
-  box.size = {x, y, z}
-  box.segments = segments
-
-  return box
+  return Object.assign(box, {size: {x, y, z}, segments})
 }

@@ -1,8 +1,5 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const PrimitiveCapsule = require('primitive-capsule')
 const { Geometry } = require('axis3d')
 
@@ -13,21 +10,18 @@ function CapsuleGeometry(opts) {
     opts = {}
   }
 
-  let { radius,
-        height,
-        segments,
-        resolution
-      } = opts
+  let { radius, height, segments, resolution } = opts
 
   // defaults
-  if (null == radius) { radius = 1 }
-  if (null == height) { height = 0.5 }
+  if (null == radius) { radius = 0.5 }
+  if (null == height) { height = 1 }
   if (null == segments) { segments = 12 }
   if (null == resolution) { resolution = 24 }
 
-  for (const o in opts) {
-    if ( opts.hasOwnProperty(o) && 'number' != typeof opts[o] ) {
-      throw new TypeError(`Expecting '${o}' to be a number. Got ${typeof opts[o]}.`)
+  for (const k in opts) {
+    if (opts.hasOwnProperty(k) && 'number' != typeof opts[k]) {
+      throw new TypeError(
+        `Expecting '${k}' to be a number. Got ${typeof opts[k]}.`)
     }
   }
 

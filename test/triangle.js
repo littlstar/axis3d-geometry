@@ -1,13 +1,10 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const TriangleGeometry = require('../triangle')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
-test('new TriangleGeometry() -> Function', ({
+test('new TriangleGeometry()', ({
   deepEqual,
   assert,
   plan,

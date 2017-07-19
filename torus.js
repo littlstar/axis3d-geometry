@@ -1,24 +1,7 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const PrimitiveTorus = require('primitive-torus')
 const { Geometry } = require('axis3d')
-
-
-const instanceOf = (instance, Parent) => {
-  if (null == instance || null == Parent) {
-    return false
-  } else if (Array.isArray(instance[$types])) {
-      return (
-         instance[$types].includes(Parent.name.toLowerCase())
-      || instance[$types].includes(Parent.name)
-      )
-  } else {
-    return instance instanceof Parent
-  }
-}
 
 module.exports = TorusGeometry
 function TorusGeometry(opts) {
@@ -32,7 +15,7 @@ function TorusGeometry(opts) {
     minorSegments,
     majorRadius,
     minorRadius,
-    arc,
+    arc
   } = opts
 
   // defaults
@@ -42,27 +25,28 @@ function TorusGeometry(opts) {
   if (null == minorRadius ) { minorRadius = 0.5 }
   if (null == arc ) { arc = 2*Math.PI }
 
-  for (const o in opts) {
-    if (opts.hasOwnProperty(o) && 'number' != typeof opts[o]) {
+  for (const k in opts) {
+    if (opts.hasOwnProperty(k) && 'number' != typeof opts[k]) {
       throw new TypeError(
-        `Expecting '${o}' to a be a number. Got ${typeof opts[o]}.`
-      )
+        `Expecting '${k}' to be a number. Got ${typeof opts[k]}.`)
     }
   }
 
   const torus = new Geometry({
     complex: PrimitiveTorus({
-      majorSegments, minorSegments,
-      majorRadius, minorSegments,
-      arc,
-    }),
+      majorSegments,
+      minorSegments,
+      majorRadius,
+      minorRadius,
+      arc
+    })
   })
 
-  torus.majorSegments = majorSegments
-  torus.minorSegments = minorSegments
-  torus.majorRadius = majorRadius
-  torus.minorRadius = minorRadius
-  torus.arc = arc
-
-  return torus
+  return Object.assign(torus, {
+    majorSegments,
+    minorSegments,
+    majorRadius,
+    minorRadius,
+    arc
+  })
 }

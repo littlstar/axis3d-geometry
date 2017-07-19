@@ -1,8 +1,5 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const PrimitiveCylinder = require('primitive-cylinder')
 const { Geometry } = require('axis3d')
 
@@ -27,9 +24,10 @@ function CylinderGeometry(opts) {
   if (null == radialSegments) { radialSegments = 50 }
   if (null == heightSegments) { heightSegments = 50 }
 
-  for (const o in opts) {
-    if ( opts.hasOwnProperty(o) && 'number' != typeof opts[o] ) {
-      throw new TypeError(`Expecting '${o}' to be a number. Got ${typeof opts[o]}.`)
+  for (const k in opts) {
+    if (opts.hasOwnProperty(k) && 'number' != typeof opts[k]) {
+      throw new TypeError(
+        `Expecting '${k}' to be a number. Got ${typeof opts[k]}.`)
     }
   }
 
@@ -42,11 +40,11 @@ function CylinderGeometry(opts) {
       heightSegments),
   })
 
-  cylinder.height = height
-  cylinder.radiusTop = radiusTop
-  cylinder.radiusBottom = radiusBottom
-  cylinder.radialSegments = radialSegments
-  cylinder.heightSegments = heightSegments
-
-  return cylinder
+  return Object.assign(cylinder, {
+    height,
+    radiusTop,
+    radiusBottom,
+    radialSegments,
+    heightSegments,
+  })
 }

@@ -1,8 +1,5 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
 const { Geometry } = require('axis3d')
 
 module.exports = TriangleGeometry
@@ -13,6 +10,7 @@ function TriangleGeometry() {
         [-1.0, -0.5*Math.sqrt(3), +0.0],
         [+1.0, -0.5*Math.sqrt(3), +0.0],
         [+0.0, +0.5*Math.sqrt(3), +0.0],
+        [-1.0, -0.5*Math.sqrt(3), +0.0],
       ],
 
       normals: [

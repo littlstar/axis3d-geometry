@@ -1,18 +1,15 @@
 'use strict'
 
-/**
- * Module dependencies.
- */
-const test = require('tape')
-const { Geometry } = require('axis3d')
 const CapsuleGeometry = require('../capsule')
+const { Geometry } = require('axis3d')
+const test = require('tape')
 
 const noop = () => void 0
 const createCapsuleGeometry = (o) => {
   return new CapsuleGeometry(o)
 }
 
-test('new CapsuleGeometry(opts) -> Function', ({
+test('new CapsuleGeometry(opts)', ({
   deepEqual,
   assert,
   throws,
@@ -27,8 +24,8 @@ test('new CapsuleGeometry(opts) -> Function', ({
   }
 
   const defaultCapsule = { flatten: false,
-                           radius: 1,
-                           height: 0.5,
+                           radius: 0.5,
+                           height: 1,
                            segments: 12,
                            resolution: 24 }
 
