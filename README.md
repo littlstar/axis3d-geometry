@@ -20,14 +20,19 @@ $ npm install axis3d-geometry
 ```javascript
 const {
   PerspectiveCamera,
-  FlatMaterial,
+  Material,
   Context,
   Frame,
   Mesh
 } = require('axis3d')
-
 const { BoxGeometry } = require('axis3d-geometry')
-const box = new Mesh(ctx, {geometry: new BoxGeometry()})
+
+const ctx = new Context()
+const material = new Material(ctx)
+const geometry = new BoxGeometry()
+const camera = new PerspectiveCamera(ctx)
+const frame = new Frame(ctx)
+const box = new Mesh(ctx, {geometry})
 
 frame(({time}) => {
   camera({position: [0, 0, 10]}, () => {
