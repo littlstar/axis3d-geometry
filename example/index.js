@@ -2,7 +2,7 @@
 
 const {
   PerspectiveCamera,
-  FlatMaterial,
+  Material,
   Command,
   Context,
   Frame,
@@ -22,7 +22,7 @@ const {
 const quat = require('gl-quat')
 
 const ctx = new Context()
-const material = new FlatMaterial(ctx)
+const material = new Material(ctx)
 const camera = new PerspectiveCamera(ctx)
 const frame = new Frame(ctx)
 
