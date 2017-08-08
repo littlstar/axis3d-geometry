@@ -1,7 +1,7 @@
 {
   "name": "axis3d-geometry",
-  "version": "1.0.0",
-  "description": "Geometry for Axis3D.",
+  "version": "1.0.1",
+  "description": "Common geometry for Axis3D",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/devtool test/index.js -hqc -t 1000 | node_modules/.bin/colortape",
@@ -27,18 +27,8 @@
   },
   "author": "Vanessa Pyne <vip@littlstar.com>",
   "license": "MIT",
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      "transform-es2015-destructuring"
-    ]
-  },
   "devDependencies": {
-    "axis3d": "^0.1.13",
+    "axis3d": "^0.2.x",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
@@ -48,7 +38,7 @@
     "tape": "^4.7.x"
   },
   "peerDependencies": {
-    "axis3d": "^0.1.x"
+    "axis3d": "^0.2.x"
   },
   "repository": {
     "type": "git",
