@@ -1,6 +1,6 @@
 {
   "name": "axis3d-geometry",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common geometry for Axis3D",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "author": "Vanessa Pyne <vip@littlstar.com>",
   "license": "MIT",
   "devDependencies": {
-    "axis3d": "^0.2.x",
+    "axis3d": "^0.1.x",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
@@ -36,6 +36,9 @@
     "colortape": "^0.1.2",
     "devtool": "^2.3.1",
     "tape": "^4.7.x"
+  },
+  "peerDependencies": {
+    "axis3d": "^0.x.x"
   },
   "repository": {
     "type": "git",
